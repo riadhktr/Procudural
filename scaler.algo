@@ -1,0 +1,104 @@
+
+
+/****     procedure                      ****/
+
+PROCEDURE dot_product(u1:ARRAY_OF INTEGER[],u2:ARRAY_OF INTEGER[])
+VAR
+  
+ 
+ i: INTEGER;
+  ps : INTEGER :=0;
+BEGIN
+  
+   for i from 1 to u1.length do
+    ps = ps + u1[i]*u2[i];
+  end_for
+  
+ 
+
+END
+/****     function                      ****/
+
+
+FUNCTION dot_product(u1:ARRAY_OF INTEGER[],u2:ARRAY_OF INTEGER[]) : INTEGER
+VAR
+
+ i: INTEGER;
+ ps : INTEGER :=0;
+    
+BEGIN
+  
+
+   for i from 1 to u1.length do
+    ps = ps + u1[i]*u2[i];
+  end_for
+    RETURN ps ;
+    
+
+END
+
+
+ALGORITHM  Dot product
+VAR
+   i:INTEGER;
+   v1:ARRAY_OF INTEGER[];
+   v2:ARRAY_OF INTEGER[];
+ ps1:INTEGER:=0;
+BEGIN
+
+ FOR i FROM 1 TO v1.length  DO
+   write(v1[i];
+   read(v1[i]));
+
+ END_FOR
+
+ FOR i FROM 1 TO v2.length  DO
+   write(v2[i];
+   read(v2[i]));
+
+ END_FOR
+ 
+ 
+ 
+IF (v1.length=v2.length) THEN   
+ ps1:=dot_Product(v1,v2);
+        IF (ps1=0) THEN
+            write(v1,v2 "are orthogonal");
+        END_IF
+   ELSE
+
+ write("the two vectors dont have the same length");
+ 
+
+END_IF
+   
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function dotProduct(vector1, vector2){
+    let result = 0;
+    for(let i = 0; i < vector1.length; i++){
+        result += vector1[i] * vector2[i]
+      }
+    return result
+  }
+
+  for(let i = 0; i < vectors.length; i++){
+    for(let j = i + 1; j < vectors.length; j++){
+      if(dotProduct(vectors[i], vectors[j]) === 0){
+          console.log(${vectors[i]} and ${vectors[j]} are orthogonal )
